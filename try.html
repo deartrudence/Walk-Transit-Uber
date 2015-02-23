@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Travel modes in directions</title>
+    <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700|Roboto:400,300,500italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+    <script src="app.js"></script>
+
+  </head>
+  <body>
+    <header>
+      <h1 class="title">Walk, Transit, Uber</h1>
+      <div class="weatherWrapper">
+        <h3 class="weather"></h3>
+        <img src="" class="weatherImg" alt="">
+      </div>
+
+      <form class="whereToForm" action="#">
+        <input type="text" placeholder="Where to?" name="dest" class="destInput">
+        <input type="submit" class="submitButton">
+      </form>
+
+      <select id="stops" class="hidden">
+        <option value="">Select your ttc stop</option>
+      </select>
+
+      <select id="directions" class="hidden">  
+      </select>
+
+      <button id="advice" class="hidden">What should I do?</button>
+    </header>
+
+    <div class="advice">
+    </div>
+
+    <div class="content-section">
+
+        <div id="content-pane1">
+          <div id="map-canvas"></div>
+          <div id="outputDiv"></div>    
+        </div>
+        <div class="content-pane" id="content-pane2">
+          <img src="images/transit.jpeg" id="ttc-pane"alt="">
+          <div id="outputDiv2"></div>
+        </div>
+        <div class="content-pane" id="content-pane3">
+          <img src="images/uber2.jpeg" id="uber-pane" alt="">
+          <div id="outputDiv3"></div>
+        </div>
+
+    </div> <!-- end .content-section -->
+
+    <footer>
+      <a href="https://twitter.com/share" class="twitter-share-button" data-via="dear_trudence" data-size="large" data-count="none">Tweet</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      <a href="https://twitter.com/dear_trudence" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @dear_trudence</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+      <p>cab photo by: <a href="https://unsplash.com/andrewruiz">Andrew Ruiz</a></p>
+      <p>weather icons by: <a href="http://thenounproject.com/alexandrahawkhead/">Alexandra Hawkhead</a> & <a href="http://thenounproject.com/Ilsur/">Ilsur Aptukov</a></p>
+    </footer>
+
+  </body>
+</html>
